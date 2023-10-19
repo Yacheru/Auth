@@ -46,7 +46,7 @@ def playtime(user: int, steamid: str):
             for row in result:
                 total_playtime += row['playtime']
                 
-        print(f"[{datetime.datetime.now().strftime('%H:%M:%S, %d/%m')}] [MYSQL] TIME SPEND TO FETCHING DATA: {timespend}")
+        print(f"[{datetime.datetime.now().strftime('%H:%M:%S, %d/%m')}] [MYSQL] [INFO] TIME SPEND TO FETCHING DATA: {timespend}")
 
         number_ranges = {
             (0, 9): 1159044396596080660,

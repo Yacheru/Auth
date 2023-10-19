@@ -15,10 +15,7 @@ def faceit_get_player_elo(user: int, steamid: int):
         level = response.json()['games']['cs2']['skill_level']
         elo = response.json()['games']['cs2']['faceit_elo']
 
-        pcursor.execute(
-            "UPDATE connections SET faceitlvl = %s, faceitelo = %s WHERE user_id = %s",
-            (level, elo, user)
-        )
+        pcursor.execute("UPDATE connections SET faceitlvl = %s, faceitelo = %s WHERE user_id = %s", (level, elo, user))
         return level
     except KeyError:
         return None

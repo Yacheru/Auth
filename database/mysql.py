@@ -18,6 +18,7 @@ def connect_to_database():
 
         connection.autocommit = True
 
+        print(f"[{datetime.datetime.now().strftime('%H:%M:%S, %d/%m')}] [MYSQL] [INFO] CONNECT SUCCESSFULLY")
         return connection
     except pymysql.Error as e:
         print(f"[{datetime.datetime.now().strftime('%H:%M:%S, %d/%m')}] [MYSQL] [ERROR] CONNECT FAILED WITH CODE {e}")
