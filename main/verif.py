@@ -1,6 +1,5 @@
 import discord
 import datetime
-import time
 
 from discord.ui import View, Button
 from discord.ext import commands
@@ -69,8 +68,6 @@ class VerifButtons(View):
                             roles.append(f"{faceit_role.mention} {faceit_icon}")
                             roles_to_add.append(faceit_role)
                             roles_names.append(faceit_role.name)
-                        else:
-                            None
 
                         if valid_role:
                             roles.append(f"{valid_role.mention} <:valid:1159335185830125588>")
